@@ -1,0 +1,119 @@
+# ===========================================================================
+# BaitZero Link Protection — Git Ignore Rules
+# ===========================================================================
+
+# Dependencies
+node_modules/
+package-lock.json.bak
+
+# Rust / Tauri Build Outputs (reproducible targets ~22.3 GB)
+src-tauri/target/
+src-tauri/target-*/
+target/
+src-tauri/gen/schemas/
+
+# Frontend Build Outputs & Caches
+dist/
+dist-ssr/
+.vite-cache/
+
+# Packaged MSIX and AppX Outputs & Staging
+*.msix
+*.appx
+*.msixbundle
+*.appxbundle
+*.msixupload
+*.appxupload
+msix-staging/
+msix-verification/
+
+# Secrets, Certificates, Signing Material & Auth Tokens
+*.pfx
+*.p12
+*.pem
+*.key
+*.cer
+*.crt
+*token*.txt
+.env
+.env.*
+*.local
+
+# Logs and Runtime Diagnostics
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test Evidence, Caches & Scratch Data
+scratch/
+ext-page-shot*.png
+test-evidence/
+
+# Historical and Ad-Hoc File Backups
+*.bak
+*.bak-*
+*.backup
+backups/
+src-tauri/newfunc.rs
+
+# Temporary Diagnostic Scripts
+scripts/audit-sizes.js
+scripts/calc-staged-size.js
+scripts/capture-candidate-window.ps1
+scripts/capture-desktop-window.ps1
+scripts/check-alert-window.ps1
+scripts/check-cand-desktop.ps1
+scripts/check-mainwindow.ps1
+scripts/check-station.ps1
+scripts/click-with-focus.ps1
+scripts/debug-chrome-cli.js
+scripts/find-*.ps1
+scripts/get-staged-size.ps1
+scripts/inspect-candidate-pid.ps1
+scripts/inspect-chrome-extensions.js
+scripts/inspect-webview-input.ps1
+scripts/inspect-windows.ps1
+scripts/list-all-titled-windows.ps1
+scripts/navigate-and-capture.ps1
+scripts/screenshot-extensions-page.js
+scripts/stage-borderless-candidate.ps1
+scripts/test-alert-dismiss.ps1
+scripts/test-alert-inspect-action.ps1
+scripts/test-analyze-endpoint.ps1
+scripts/test-candidate-launch.ps1
+scripts/test-candidate-live-analysis.js
+scripts/test-chrome-targets.ps1
+scripts/test-clean-devmode.js
+scripts/test-click-devmode.js
+scripts/test-d3d-click.ps1
+scripts/test-desktop-thread.ps1
+scripts/test-developer-mode.js
+scripts/test-edge-extension.js
+scripts/test-find-all-windows.ps1
+scripts/test-get-process.ps1
+scripts/test-launch-with-devmode.js
+scripts/test-load-unpacked-cdp.js
+scripts/test-mgmt-getall.js
+scripts/test-mouse-event.ps1
+scripts/test-pref-devmode.js
+scripts/test-run-log.ps1
+scripts/test-trigger-alert.ps1
+scripts/test-ui-analysis.ps1
+
+# IDE & OS Artifacts
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

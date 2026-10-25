@@ -1,0 +1,27 @@
+{
+  "name": "project-1",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "validate:assets": "node scripts/validate-public-assets.js",
+    "build": "node scripts/validate-public-assets.js && vite build",
+    "package:extension": "node scripts/package-extension.js",
+    "test:safeguards": "node test-packaging-safeguards.js",
+    "preview": "vite preview",
+    "server": "node server.js",
+    "tauri": "tauri",
+    "build:backend": "cargo build --release --manifest-path src-tauri/Cargo.toml --features custom-protocol",
+    "sparse:register": "powershell -ExecutionPolicy Bypass -File scripts/register-sparse-package.ps1",
+    "sparse:launch": "powershell -ExecutionPolicy Bypass -File scripts/launch-sparse-app.ps1",
+    "sparse:run": "powershell -ExecutionPolicy Bypass -File scripts/build-and-launch.ps1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.1",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.12.1"
+  }
+}

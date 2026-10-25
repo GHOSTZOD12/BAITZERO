@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Link Protection — Browser Guard",
+  "version": "1.0.0",
+  "description": "Works with the Link Protection desktop application to check browser navigation URLs for suspicious indicators.",
+
+  "permissions": [
+    "webNavigation",
+    "storage",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "http://127.0.0.1:27432/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Link Protection",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

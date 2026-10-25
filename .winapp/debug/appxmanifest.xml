@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10" xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10" xmlns:desktop6="http://schemas.microsoft.com/appx/manifest/desktop/windows10/6" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap uap2 uap3 uap10 desktop desktop6 rescap build" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build">
+  <Identity Name="link-protection-system" Publisher="CN=Link Protection Team" Version="1.0.0.0" ProcessorArchitecture="x64" />
+  <Properties>
+    <DisplayName>BaitZero</DisplayName>
+    <PublisherDisplayName>Link Protection Team</PublisherDisplayName>
+    <Description>Lightweight desktop link protection and anti-phishing system</Description>
+    <Logo>Assets\StoreLogo.png</Logo>
+    <uap10:AllowExternalContent>true</uap10:AllowExternalContent>
+    <desktop6:RegistryWriteVirtualization>disabled</desktop6:RegistryWriteVirtualization>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19041.0" MaxVersionTested="10.0.26200.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="en-us" />
+  </Resources>
+  <Applications>
+    <Application Id="linkprotectionsystem" Executable="link-protection-system.exe" uap10:TrustLevel="mediumIL" uap10:RuntimeBehavior="win32App">
+      <uap:VisualElements DisplayName="BaitZero" Description="Lightweight desktop link protection and anti-phishing system" BackgroundColor="#464646" Square150x150Logo="Assets\MedTile.png" Square44x44Logo="Assets\AppList.png" AppListEntry="none">
+        <uap:DefaultTile Wide310x150Logo="Assets\WideTile.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <uap3:Capability Name="userNotificationListener" />
+    <rescap:Capability Name="unvirtualizedResources" />
+    <rescap:Capability Name="allowElevation" />
+  </Capabilities>
+  <build:Metadata>
+    <build:Item Name="Microsoft.WinAppCli" Version="0.7.1" />
+  </build:Metadata>
+</Package>

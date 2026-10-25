@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="favBg" cx="50%" cy="50%" r="50%" fx="40%" fy="35%">
+      <stop offset="0%" stop-color="#140A26" />
+      <stop offset="70%" stop-color="#080511" />
+      <stop offset="100%" stop-color="#050408" />
+    </radialGradient>
+
+    <!-- Neon Rim Gradient -->
+    <linearGradient id="favRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC" />
+      <stop offset="40%" stop-color="#7C3CFF" />
+      <stop offset="80%" stop-color="#A970FF" />
+      <stop offset="100%" stop-color="#4C1D95" />
+    </linearGradient>
+
+    <!-- Shark Body Gradient -->
+    <linearGradient id="favSharkUpper" x1="20%" y1="15%" x2="80%" y2="50%">
+      <stop offset="0%" stop-color="#DDD6FE" />
+      <stop offset="35%" stop-color="#A970FF" />
+      <stop offset="80%" stop-color="#7C3CFF" />
+      <stop offset="100%" stop-color="#581C87" />
+    </linearGradient>
+
+    <linearGradient id="favSharkFin" x1="40%" y1="10%" x2="60%" y2="30%">
+      <stop offset="0%" stop-color="#F5F0FF" />
+      <stop offset="45%" stop-color="#A970FF" />
+      <stop offset="100%" stop-color="#3B176D" />
+    </linearGradient>
+
+    <linearGradient id="favSharkUnder" x1="15%" y1="40%" x2="45%" y2="85%">
+      <stop offset="0%" stop-color="#7C3CFF" />
+      <stop offset="60%" stop-color="#3B176D" />
+      <stop offset="100%" stop-color="#1D0A38" />
+    </linearGradient>
+
+    <!-- Chain Gradients -->
+    <linearGradient id="favChainGrad" x1="35%" y1="85%" x2="85%" y2="45%">
+      <stop offset="0%" stop-color="#A970FF" />
+      <stop offset="40%" stop-color="#C084FC" />
+      <stop offset="75%" stop-color="#7C3CFF" />
+      <stop offset="100%" stop-color="#3B176D" />
+    </linearGradient>
+
+    <linearGradient id="favSpecular" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="favGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Frame Background & Squircle Rim -->
+  <rect x="5" y="5" width="90" height="90" rx="22" ry="22" fill="url(#favBg)" />
+  <rect x="5" y="5" width="90" height="90" rx="22" ry="22" fill="none" stroke="url(#favRim)" stroke-width="2" filter="url(#favGlow)" />
+
+  <!-- Dorsal Fin -->
+  <path d="M 40.5 25.5 C 43.5 17.5 45.8 12.2 46.8 11.2 C 49.5 15.5 54.8 21.5 59.5 25.5 C 53.5 25.5 46.5 25.5 40.5 25.5 Z" fill="url(#favSharkFin)" />
+  <path d="M 40.5 25.5 C 43.5 17.5 45.8 12.2 46.8 11.2" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" opacity="0.8" />
+
+  <!-- Pectoral / Ventral Fin -->
+  <path d="M 43 48 C 45 42 51 40 54 40.5 C 49.5 45.5 45.5 51 43 56 Z" fill="#3B176D" />
+  <path d="M 43 48 C 45 42 51 40 54 40.5" stroke="#A970FF" stroke-width="0.8" opacity="0.7" />
+
+  <!-- Shark Upper Body (Arched Crest & Snout) -->
+  <path d="M 14.5 46.5 C 14.5 32 26 20 44 20 C 58 20 70 26 79 44 C 67 42.5 52 40.5 43.5 47 C 33.5 43 23 48 18 55 C 15.5 52.5 14.5 49.5 14.5 46.5 Z" fill="url(#favSharkUpper)" />
+
+  <!-- Shark Lower Body / Flank / Tail Sweep -->
+  <path d="M 18 55 C 23 48 33.5 43 43.5 47 C 39 53 36 60 41 68 C 45 74 38 85 38 85 C 26 75 14.5 61 18 55 Z" fill="url(#favSharkUnder)" />
+
+  <!-- Eye Cutout -->
+  <circle cx="62.5" cy="34" r="2.2" fill="#06040A" />
+
+  <!-- Shark Spine Highlight Arc -->
+  <path d="M 22 36 C 30 24 45 21 65 26 C 71 28 76 34 78 42" stroke="url(#favSpecular)" stroke-width="1.6" stroke-linecap="round" />
+
+  <!-- Interlocking Chain Link (Angled 45 deg) -->
+  <g transform="rotate(-45 62 68)">
+    <!-- Lower Link Loop -->
+    <rect x="42" y="58" width="30" height="15" rx="7.5" ry="7.5" fill="none" stroke="url(#favChainGrad)" stroke-width="5" />
+    <!-- Upper Link Loop (Interlocking) -->
+    <rect x="52" y="63" width="30" height="15" rx="7.5" ry="7.5" fill="none" stroke="url(#favChainGrad)" stroke-width="5" />
+    <!-- Center Cutouts for Clean Negative Space -->
+    <rect x="45.5" y="61.5" width="23" height="8" rx="4" ry="4" fill="#080511" />
+    <rect x="55.5" y="66.5" width="23" height="8" rx="4" ry="4" fill="#080511" />
+  </g>
+
+  <!-- Specular Glints -->
+  <circle cx="75" cy="41" r="1.5" fill="#FFFFFF" opacity="0.95" />
+  <circle cx="47" cy="12" r="1.2" fill="#FFFFFF" opacity="0.9" />
+  <circle cx="64" cy="74" r="1.4" fill="#FFFFFF" opacity="0.85" />
+</svg>
